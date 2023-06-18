@@ -3,6 +3,11 @@
   <div class="container">
     <div class="columns">
       <div class="column is-10 is-offset-1">
+        
+        {{- if .Site.Params.subHeading -}}
+        <h2 class="subtitle is-4 is-hidden-mobile">{{ .Site.Params.subHeading }}</h2>
+        {{- end -}}
+
         <div class="columns">
           <div class="column is-8">
             <div class="post-lists">
