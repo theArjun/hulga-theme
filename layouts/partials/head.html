@@ -7,17 +7,25 @@
   <meta name="msapplication-TileColor" content="{{.Site.Params.primaryColor}}">
   <meta name="theme-color" content="{{.Site.Params.primaryColor}}">
   {{- end -}}
+  <meta property="og:url" content="{{ .Site.Params.siteURL }}">
   {{- if .IsHome -}}
+
   <title>{{ .Site.Title }} {{- if .Site.Params.subtitle }} | {{ .Site.Params.subtitle }} {{- end -}}</title>
   <meta property="og:title" content="{{ .Site.Title }} {{- if .Site.Params.subtitle }} | {{ .Site.Params.subtitle }} {{- end -}}">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ .Site.Title }}">
+  <meta property="og:description" content="{{ .Site.Params.description }}">
+  <meta property="og:image" content="{{ .Site.Params.ogImageURL }}">
+
   {{ if .Site.Params.keywords }}
   <meta name="keywords" content="{{.Site.Params.keywords}}">
   {{ end }}
   {{ if .Site.Params.description }}
   <meta name="description" content="{{ .Site.Params.description }}">
   {{ end }}
+
   {{- else -}}
+
   <title>{{ .Title }} | {{ .Site.Title }}</title>
   <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
   <meta property="og:type" content="article">
