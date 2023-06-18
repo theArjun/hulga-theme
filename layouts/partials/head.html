@@ -8,6 +8,8 @@
   <meta name="theme-color" content="{{.Site.Params.primaryColor}}">
   {{- end -}}
   <meta property="og:url" content="{{ .Site.Params.siteURL }}">
+  <link rel="canonical" href="{{ .Site.Params.fullSiteURL }}" />
+
   {{- if .IsHome -}}
 
   <title>{{ .Site.Title }} {{- if .Site.Params.subtitle }} | {{ .Site.Params.subtitle }} {{- end -}}</title>
