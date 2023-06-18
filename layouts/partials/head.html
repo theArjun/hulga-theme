@@ -57,4 +57,7 @@
   {{- if .Site.Params.pwa }}
   <link rel="manifest" href="/manifest.json">
   {{- end }}
+  {{- if .Site.Params.googleAds }}
+  {{- partial "google_ads.html" . -}}
+  {{- end }}
 </head>
