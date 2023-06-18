@@ -1,2 +1,5 @@
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1513778230994689"
+{{ if .Site.Params.googleAdSenseID }}
+<script async
+     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ .Site.Params.googleAdSenseID }}"
      crossorigin="anonymous"></script>
+{{ end }}

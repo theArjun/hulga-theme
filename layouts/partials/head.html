@@ -70,4 +70,7 @@
   {{- if .Site.Params.googleAds }}
   {{- partial "google_ads.html" . -}}
   {{- end }}
+  {{- if .Site.Params.googleAnalytics }}
+  {{- partial "google_analytics.html" . -}}
+  {{- end }}
 </head>
